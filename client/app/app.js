@@ -1,6 +1,22 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactAddons from 'react/addons';
+import Header from './components/common/header';
+import Router from 'react-router';
 
-import TodoList from './TodoList';
+var RouteHandler = Router.RouteHandler;
 
-ReactDOM.render(<TodoList />, document.getElementById('app'));
+export default class App extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+    render() {
+        return (
+            <div>
+                <Header/>
+                <div className="view">
+                    <RouteHandler />
+                </div>
+            </div>
+        );
+    }
+}

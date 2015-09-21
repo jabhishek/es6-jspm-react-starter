@@ -1,0 +1,76 @@
+@import 'globals/lesshat.less';
+@import 'globals/variables.less';
+@import 'globals/mixins.less';
+@import 'globals/reset.less';
+
+html {
+  font-size: 62.5%;
+  font-family: 'Raleway';
+  height: 100%;
+}
+
+input {
+  font-family: 'Raleway';
+}
+
+body {
+  font-size: 1.4rem;
+  height: 100%;
+}
+
+#app {
+  height: 100%;
+  .loading {
+    height: 100%;
+    background: #eeeeee;
+    flex: 1;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    .loading-items {
+      font-size: 4rem;
+      text-align: center;
+      .text {
+        text-transform: uppercase;
+        display: block;
+        margin-bottom: 1rem;
+      }
+
+      i {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+.view {
+  h1 {
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #eeeeee;
+  }
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+.view {
+  padding: 10px;
+}
+
+p {
+  margin: 1rem 0;
+}
+
+@import 'components/common/header.less';
+@import 'components/about/aboutPage';

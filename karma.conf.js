@@ -11,12 +11,12 @@ module.exports = function (config) {
         // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
         frameworks: ['jspm', 'jasmine'],
 
-		    usePolling: true,
+        usePolling: true,
 
         plugins: [
             'karma-jasmine',
             'karma-jspm',
-			      'karma-chrome-launcher'
+            'karma-chrome-launcher'
         ],
 
         // test results reporter to use
@@ -46,13 +46,13 @@ module.exports = function (config) {
         singleRun: false,
 
         jspm: {
-            loadFiles: ['client/app/**/*spec.js'],
-            serveFiles: ['client/app/**/*.*'],
+            loadFiles: ['client/tests/**/*spec.js'],
+            serveFiles: ['client/app/**/*.*', 'client/tests/**/*.js'],
             config: "client/config.js",
             packages: "client/jspm_packages"
         },
         proxies: {
-          '/base/jspm_packages/': '/base/client/jspm_packages/'
+            '/base/jspm_packages/': '/base/client/jspm_packages/'
         }
     });
 };
